@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">homework47.1.0</string>
+    <string name="enter_text">Введите текст</string>
+    <string name="send">Отправить</string>
+    <string name="enter_text_again">Введите текст еще раз</string>
+    <string name="first_activity">Первый активити</string>
+    <string name="second_activity">Второй активити</string>
+</resources>
