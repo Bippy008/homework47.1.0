@@ -22,7 +22,7 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        var textFromActivity: String? = intent.extras?.getString("key")
+        val textFromActivity: String? = intent.extras?.getString(key)
         binding.secondEt.setText(textFromActivity)
         initClicker()
     }
@@ -32,10 +32,15 @@ class SecondActivity : AppCompatActivity() {
             secondBtn.setOnClickListener {
                 if (secondEt.text.isNotEmpty()) {
                     val intent = Intent(this@SecondActivity, MainActivity::class.java)
-                    intent.putExtra("key2", secondEt.text.toString())
+                    intent.putExtra(key2, secondEt.text.toString())
                     startForResult.launch(intent)
                 }
             }
         }
+    }
+
+    companion object {
+        var key = "key"
+        var key2 = "key2"
     }
 }
